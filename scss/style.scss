@@ -1,0 +1,81 @@
+@import "components/index";
+@import "components/nosotras";
+@import "components/colecciones";
+@import "components/contacto";
+@import "components/faqs";
+@import "base/variables";
+@import "base/extends";
+@import "base/listas";
+@import "base/mixin";
+@import "base/operadores";
+
+* {
+    margin: 20px;
+    padding: 0;
+}
+
+body {
+    background-color: #F2C67B;
+}
+
+.imagen-logo {
+    @extend %flex;
+}
+
+#titulo {
+    font-family: $font-principal;
+    color: $color-principal;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* Anidamiento */
+
+.menu-header {
+    font-family: $font-principal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $color-principal;
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        text-decoration: underline;
+        color: $color-principal;
+        font-size: 22px;
+        text-align: left;
+    }
+}
+
+.footer-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-principal;
+    text-decoration: none;
+    font-family: $font-principal;
+    .menu-footer {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 16px;
+        text-align: left;
+        .contacto-whatsapp {
+            font-size: 16px;
+        }
+    }
+}
+
+.contacto-whatsapp {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    color: nth($colores, 4);
+    /* Incorporo animación en imágenes */
+    &:hover {
+    transform: scale(1.5);
+    transition-duration: 2s;
+    }
+}

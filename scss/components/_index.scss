@@ -1,0 +1,33 @@
+@import "../base/variables";
+@import "../base/extends";
+@import "../base/listas";
+@import "../base/mixin";
+@import "../base/operadores";
+
+.parrafo-container {
+    color: $color-principal;
+    text-align: left;
+    text-decoration: underline;
+    font-family: $font-principal;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .parrafo-index {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.titulo-index-2 {
+    color: nth($colores, 1);
+    @extend %parrafo;
+    @extend %flex;
+}
+
+.titulo-index-3 {
+    font-family: $font-principal;
+    color: $color-principal;
+    text-align: center;
+    font-size: 20px;
+}

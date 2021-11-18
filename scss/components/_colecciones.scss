@@ -1,0 +1,17 @@
+@import "../base/variables";
+@import "../base/extends";
+@import "../base/listas";
+@import "../base/mixin";
+@import "../base/operadores";
+
+#mini, #bebe {
+    color: nth($colores, 1);
+    @extend %parrafo;
+    @extend %flex;
+}
+
+/* Incorporo animación en imágenes */
+.imagen:hover {
+    transform: scale(1.5);
+    transition-duration: 2s;
+}
